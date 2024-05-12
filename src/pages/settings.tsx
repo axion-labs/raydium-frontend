@@ -73,7 +73,7 @@ function ProgramIDTabs() {
         onChange={(tabName) => {
           setTempProgramIds(
             tabName === 'mainnet'
-              ? objectMap(MAINNET_PROGRAM_ID, toPubString)
+              ? "9oRqkMriwmroDNXZSBucmKN9futCedU6aHkxNaiYMtTW"
               : objectMap(DEVNET_PROGRAM_ID, toPubString)
           )
           setTempInnerChoice(tabName)
