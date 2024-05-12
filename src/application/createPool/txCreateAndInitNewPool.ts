@@ -97,7 +97,7 @@ export default async function txCreateAndInitNewPool({ onAllSuccess }: { onAllSu
       connection,
       programId: useAppAdvancedSettings.getState().programIds.AmmV4,
       marketInfo: {
-        programId: useAppAdvancedSettings.getState().programIds.OPENBOOK_MARKET,
+        programId: "9oRqkMriwmroDNXZSBucmKN9futCedU6aHkxNaiYMtTW",
         marketId: toPub(marketId)
       },
       associatedOnly: false,
