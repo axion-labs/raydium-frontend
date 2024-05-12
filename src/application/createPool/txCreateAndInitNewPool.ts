@@ -122,7 +122,8 @@ export default async function txCreateAndInitNewPool({ onAllSuccess }: { onAllSu
       computeBudgetConfig: await getComputeBudgetConfig(),
       checkCreateATAOwner: true,
       makeTxVersion: txVersion,
-      lookupTableCache,
+      //lookupTableCache,
+      undefined,
       feeDestinationId: new PublicKey('7YttLkHDoNj9wyDur5pM1ejNaAvT9X4eqaYcHQqtj2G5')
     })
     console.log(`${baseDecimaledAmount} ${baseToken.symbol} and ${quoteDecimaledAmount} ${quoteToken.symbol} -> ${useAppAdvancedSettings.getState().programIds.AmmV4} -> ${useAppAdvancedSettings.getState().programIds.OPENBOOK_MARKET} -> ${tokenAccountRawInfos} -> $(marketId} ->${lookupTableCache}`)
