@@ -234,7 +234,7 @@ export function createTxHandler<Arg extends Record<string, any>>(
 }
 
 /** as it may use without txHandler, so be a isolate variable */
-export const lookupTableCache: CacheLTA = {}
+export const lookupTableCache = undefined
 
 /**
  * **DUTY:**
