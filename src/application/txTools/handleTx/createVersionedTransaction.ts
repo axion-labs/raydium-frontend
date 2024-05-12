@@ -17,7 +17,7 @@ export async function buildTransactionsFromSDKInnerTransactions({
     payer: wallet,
     innerTransactions: transactions,
     makeTxVersion: txVersion,
-    addLookupTableInfo: LOOKUP_TABLE_CACHE,
+    addLookupTableInfo: undefined,
   })
   return spawnedTransactions
 }
