@@ -16,9 +16,10 @@ export type CreateMarket = {
 
   newCreatedMarketId?: PublicKeyish
 }
-
+console.log(MAINNET_PROGRAM_ID.OPENBOOK_MARKET);
+console.log(toPubString(MAINNET_PROGRAM_ID.OPENBOOK_MARKET));
 export const useCreateMarket = create<CreateMarket>((set) => ({
-  programId: toPubString(MAINNET_PROGRAM_ID.OPENBOOK_MARKET),
+  programId: "9oRqkMriwmroDNXZSBucmKN9futCedU6aHkxNaiYMtTW",
   minimumOrderSize: 1,
   tickSize: 0.01
 }))
