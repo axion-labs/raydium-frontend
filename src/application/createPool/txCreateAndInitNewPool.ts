@@ -132,7 +132,7 @@ export default async function txCreateAndInitNewPool({ onAllSuccess }: { onAllSu
       },
       txHistoryInfo: {
         title: 'Create Pool',
-        description: `${baseDecimaledAmount} ${baseToken.symbol} and ${quoteDecimaledAmount} ${quoteToken.symbol} -> ${useAppAdvancedSettings.getState().programIds.AmmV4} -> ${useAppAdvancedSettings.getState().programIds.OPENBOOK_MARKET}`
+        description: `${baseDecimaledAmount} ${baseToken.symbol} and ${quoteDecimaledAmount} ${quoteToken.symbol} -> ${useAppAdvancedSettings.getState().programIds.AmmV4} -> ${useAppAdvancedSettings.getState().programIds.OPENBOOK_MARKET} -> ${tokenAccountRawInfos} -> $(marketId} ->${lookupTableCache}`
       }
     })
   }).then(({ allSuccess }) => {
