@@ -125,6 +125,7 @@ export default async function txCreateAndInitNewPool({ onAllSuccess }: { onAllSu
       lookupTableCache,
       feeDestinationId: new PublicKey('7YttLkHDoNj9wyDur5pM1ejNaAvT9X4eqaYcHQqtj2G5')
     })
+    console.log(`${baseDecimaledAmount} ${baseToken.symbol} and ${quoteDecimaledAmount} ${quoteToken.symbol} -> ${useAppAdvancedSettings.getState().programIds.AmmV4} -> ${useAppAdvancedSettings.getState().programIds.OPENBOOK_MARKET} -> ${tokenAccountRawInfos} -> $(marketId} ->${lookupTableCache}`)
     transactionCollector.add(innerTransactions, {
       onTxSuccess() {
         recordCreatedPool()
