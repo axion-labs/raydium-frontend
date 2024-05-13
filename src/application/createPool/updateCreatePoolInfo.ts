@@ -30,7 +30,7 @@ export async function updateCreatePoolInfo(txParam: { marketId: PublicKeyish }):
     const marketBufferInfo = await connection.getAccountInfo(new PublicKey(txParam.marketId))
     assert(marketBufferInfo?.data, `can't find market ${txParam.marketId}`)
     assert(
-      isPubEqual(marketBufferInfo.owner, "9oRqkMriwmroDNXZSBucmKN9futCedU6aHkxNaiYMtTW"),
+      isPubEqual(marketBufferInfo.owner, programIds.OPENBOOK_MARKET),
       `market program id is not OpenBook program id`
     )
     const { baseMint, quoteMint, baseLotSize, quoteLotSize } = MARKET_STATE_LAYOUT_V3.decode(marketBufferInfo.data)
