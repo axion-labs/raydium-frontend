@@ -95,7 +95,8 @@ export default async function txCreateAndInitNewPool({ onAllSuccess }: { onAllSu
     // step2: init new pool (inject money into the created pool)
     const { innerTransactions } = await Liquidity.makeCreatePoolV4InstructionV2Simple({
       connection,
-      programId: useAppAdvancedSettings.getState().programIds.AmmV4,
+      // programId: useAppAdvancedSettings.getState().programIds.AmmV4,
+      programId: toPub("HTsBDeuhbRYANHwgAi2DrLYZxDPqKcL9P78ZxL4pT6sP"),
       marketInfo: {
         programId: useAppAdvancedSettings.getState().programIds.OPENBOOK_MARKET,
         marketId: toPub(marketId)
@@ -123,7 +124,7 @@ export default async function txCreateAndInitNewPool({ onAllSuccess }: { onAllSu
       checkCreateATAOwner: true,
       makeTxVersion: txVersion,
       //lookupTableCache,
-      feeDestinationId: new PublicKey('7YttLkHDoNj9wyDur5pM1ejNaAvT9X4eqaYcHQqtj2G5')
+      feeDestinationId: new PublicKey('HmMCe96Yg9XSqs8sVBoicUQfV4uj9mhrSu4edRgX7s6k')
     })
     transactionCollector.add(innerTransactions, {
       onTxSuccess() {
